@@ -20,8 +20,10 @@ module "webserver-cluster" {
   instance_type = "t2.micro"
   min_size = 2
   max_size = 2
+  enable_autoscaling = false
 }
 
+/*
 //Demonstrate using output values from module
 resource "aws_autoscaling_schedule" "scale_out_during_business_hours" {
   autoscaling_group_name = "${module.webserver-cluster.asg_name}"
@@ -41,6 +43,6 @@ resource "aws_autoscaling_schedule" "scale_in_at_night" {
   desired_capacity = 2
   recurrence = "0 17 * * *"
 }
-
+*/
 
 

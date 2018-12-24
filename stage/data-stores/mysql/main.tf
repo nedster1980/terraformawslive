@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 module "mysql" {
-  source = "../../../modules/data-stores/mysql"
+  source = "git@github.com:nedster1980/terraformawsmodules.git//data-stores/mysql?ref=v0.0.2"
 
   db_name = "mysqlstage"
   //Ignore this passing in password in plain text for now
