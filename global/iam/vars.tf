@@ -4,3 +4,8 @@ variable "user_names" {
   default = ["Alice", "Bob", "Charles"]
 }
 
+variable "give_alice_cloudwatch_full_access" {
+  description = "Give user Alice full access to Cloudwatch"
+}
+
+
